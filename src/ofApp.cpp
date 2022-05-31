@@ -20,6 +20,7 @@ void ofApp::setup(){
     gui->addFRM();
     //显示fps
     gui->addButton("click")->setLabel("Click to record");
+    gui->addFRM();
     gui->setVisible(false);
     ofSetWindowPosition(ofGetScreenWidth()/2-WindowWidth/2, ofGetScreenHeight()/2-WindowHeight/2);
     gui->onButtonEvent(this, &ofApp::onButtonEvent);
@@ -70,10 +71,7 @@ void ofApp::draw(){
         texGray.draw(0,0);
     }
     
-//
-    
-    ofDrawBitmapStringHighlight(ofToString(ofGetFrameRate(),2), 20, 20);
-    cout<<"*******************************"<<endl;
+//    ofDrawBitmapStringHighlight(ofToString(ofGetFrameRate(),2), 20, 20);
         
 }
 void ofApp::onButtonEvent(ofxDatGuiButtonEvent(e)){
